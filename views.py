@@ -1,7 +1,14 @@
+# I have created this file - Saurabh
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.contrib import admin
 
+# code for video 6
+# def index(request):
+#     return HttpResponse ("hello")
+#
+# def about(request):
+#     return HttpResponse ("hello, i am saurabh soni and  i am here to learn python ")
 
 def index(request):
     return render(request, 'index.html')
@@ -48,6 +55,9 @@ def analyze(request):
                 analyzed = analyzed + char
         param = {'purpose': 'Removed New Line', 'analyzed_text': analyzed}
         return render(request, 'analyze.html', param)
-     else:
+
+
+
+    else:
         return HttpResponse("Error")
 
